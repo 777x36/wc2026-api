@@ -192,7 +192,53 @@ def delete_match(match_id: int):
     data["knockout_matches"] = [m for m in data["knockout_matches"] if m["id"] != match_id]
     save_data(data)
     return RedirectResponse(url="/admin", status_code=303)
+# ========== صفحة تعديل مباراة واحدة (بدون JavaScript معقد) ==========
+@app.get("/admin/edit_match/{match_id}", response_class=HTMLResponse, dependencies=[Depends(verify_admin)])
+def edit_match_form(request: Request, match_id: int):
+    data = load_data()
+    all_matches = data["matches"] + data.get("knockout_matches", [])
+    match = next((m for m in all_matches if m["id"] == match_id), None)
+    if not match:
+        raise HTTPException(404, "Match not found")
+    return templates.TemplateResponse("edit_match.html", {"request": request, "match": match})
 
+@app.post("/admin/edit_match/{match_id}", dependencies=[Depends(verify_admin)])
+async def update_match_from_form(match_id: int, request: Request):
+    data = load_data()
+    all_matches = data["matches"] + data.get("knockout_matches", [])
+    match = next((m for m in all_matches if m["id"] == match_id), None)
+    if not match:
+        raise HTTPException(404, "Match not found")
+    form = await request.form()
+    
+    # تحويل القيم من النموذج
+    home_goals = int(form.get("home_goals", 0))
+    away_goals = int(form.get("away_goals", 0))
+    corners_home = int(form.get("corners_home", 0))
+    corners_away = int(form.get("corners_away", 0))
+    fouls_home = int(form.get("fouls_home", 0))
+    fouls_away = int(form.get("fouls_away", 0))
+    yellow_home = int(form.get("yellow_home", 0))
+    yellow_away = int(form.get("yellow_away", 0))
+    red_home = int(form.get("red_home", 0))
+    red_away = int(form.get("red_away", 0))
+    both_teams_score = form.get("both_teams_score") == "true"
+    over_2_5 = form.get("over_2_5") == "true"
+    
+    match["prediction"] = {
+        "winner": form.get("winner", "TBD"),
+        "home_goals": home_goals,
+        "away_goals": away_goals,
+        "total_goals": home_goals + away_goals,
+        "both_teams_score": both_teams_score,
+        "over_2_5": over_2_5,
+        "corners": {"home": corners_home, "away": corners_away, "total": corners_home + corners_away},
+        "fouls": {"home": fouls_home, "away": fouls_away, "total": fouls_home + fouls_away},
+        "yellow_cards": {"home": yellow_home, "away": yellow_away, "total": yellow_home + yellow_away},
+        "red_cards": {"home": red_home, "away": red_away, "total": red_home + red_away}
+    }
+    save_data(data)
+    return RedirectResponse(url="/admin", status_code=303)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
