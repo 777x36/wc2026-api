@@ -35,7 +35,7 @@
             <option value="third_place">Third Place</option>
             <option value="final">Final</option>
         </select>
-        <input type="text" name="group" placeholder="Group (A-L) for group stage">
+        <input type="text" name="group" placeholder="Group (A-L)">
         <input type="text" name="winner" placeholder="Winner / TBD" required>
         <input type="number" name="home_goals" placeholder="Home Goals" required>
         <input type="number" name="away_goals" placeholder="Away Goals" required>
@@ -52,9 +52,12 @@
         <button type="submit">Add Match</button>
     </form>
 
-    <h2>⚽ Group Stage ({{ matches|length }} matches)</h2>
+    <h2>⚽ Group Stage Matches ({{ matches|length }})</h2>
     <table border="1">
-        <tr><th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th></tr>
+        <tr>
+            <th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th>
+            <th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th>
+        </tr>
         {% for m in matches %}
         <tr>
             <td>{{ m.id }}</td><td>{{ m.group }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
@@ -63,16 +66,36 @@
             <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
             <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
             <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
-            <td><button onclick="toggleEdit('g{{ m.id }}')">Edit</button></td>
-            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete?')"><button class="delete">Delete</button></form></td>
+            <td><button onclick="toggleEdit('g{{ m.id }}')">✏️ Edit</button></td>
+            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
         </tr>
-        <tr><td colspan="12"><div id="g{{ m.id }}" class="inline-edit"><form method="post" action="/admin/update_match/{{ m.id }}">...</form></div></td></tr>
+        <tr><td colspan="12"><div id="g{{ m.id }}" class="inline-edit">
+            <form method="post" action="/admin/update_match/{{ m.id }}">
+                <input type="text" name="winner" value="{{ m.prediction.winner }}" required><br>
+                <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
+                <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required><br>
+                <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
+                <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"><br>
+                <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
+                <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"><br>
+                <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
+                <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"><br>
+                <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
+                <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"><br>
+                <label>BTTS <input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}></label>
+                <label>Over 2.5 <input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}></label>
+                <button type="submit">💾 Save Changes</button>
+            </form>
+        </div></td></tr>
         {% endfor %}
     </table>
 
-    <h2>🏆 Knockout Stage ({{ knockout|length }} matches)</h2>
+    <h2>🏆 Knockout Matches ({{ knockout|length }})</h2>
     <table border="1">
-        <tr><th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th></tr>
+        <tr>
+            <th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th>
+            <th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th>
+        </tr>
         {% for m in knockout %}
         <tr>
             <td>{{ m.id }}</td><td>{{ m.stage }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
@@ -81,18 +104,45 @@
             <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
             <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
             <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
-            <td><button onclick="toggleEdit('k{{ m.id }}')">Edit</button></td>
-            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete?')"><button class="delete">Delete</button></form></td>
+            <td><button onclick="toggleEdit('k{{ m.id }}')">✏️ Edit</button></td>
+            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
         </tr>
-        <tr><td colspan="12"><div id="k{{ m.id }}" class="inline-edit">...</div></td></tr>
+        <tr><td colspan="12"><div id="k{{ m.id }}" class="inline-edit">
+            <form method="post" action="/admin/update_match/{{ m.id }}">
+                <input type="text" name="winner" value="{{ m.prediction.winner }}" required><br>
+                <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
+                <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required><br>
+                <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
+                <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"><br>
+                <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
+                <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"><br>
+                <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
+                <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"><br>
+                <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
+                <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"><br>
+                <label>BTTS <input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}></label>
+                <label>Over 2.5 <input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}></label>
+                <button type="submit">💾 Save Changes</button>
+            </form>
+        </div></td></tr>
         {% endfor %}
     </table>
 </div>
+
 <script>
 function toggleEdit(id) {
     var el = document.getElementById(id);
-    el.style.display = el.style.display === "block" ? "none" : "block";
+    if (el) {
+        if (el.style.display === "none" || el.style.display === "") {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+    } else {
+        console.error("Element not found: " + id);
+    }
 }
 </script>
+
 </body>
 </html>
