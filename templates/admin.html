@@ -94,12 +94,6 @@
         .match-table tr:nth-child(even) {
             background: #f9f9f9;
         }
-        .edit-form {
-            background: #fef9e4;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
         .footer {
             margin-top: 30px;
             text-align: center;
@@ -112,12 +106,12 @@
 <div class="container">
     <h1>🏆 World Cup 2026 Predictions Admin</h1>
 
-    <!-- نموذج إضافة مباراة جديدة -->
+    <!-- Add new match form -->
     <div class="add-match-form">
         <h2>➕ Add New Match</h2>
         <form method="post" action="/admin/add_match">
-            <div class="form-group"><label>Home Team</label> <input type="text" name="home_team" required></div>
-            <div class="form-group"><label>Away Team</label> <input type="text" name="away_team" required></div>
+            <div class="form-group"><label>Team 1</label> <input type="text" name="home_team" placeholder="e.g., France" required></div>
+            <div class="form-group"><label>Team 2</label> <input type="text" name="away_team" placeholder="e.g., Brazil" required></div>
             <div class="form-group"><label>Date</label> <input type="date" name="date" required></div>
             <div class="form-group"><label>Time</label> <input type="time" name="time" required></div>
             <div class="form-group"><label>Stage</label>
@@ -133,38 +127,42 @@
             </div>
             <div class="form-group"><label>Group (A-L)</label> <input type="text" name="group"></div>
             <div class="form-group"><label>Predicted Winner</label> <input type="text" name="winner" required></div>
-            <div class="form-group"><label>Home Goals</label> <input type="number" name="home_goals" required></div>
-            <div class="form-group"><label>Away Goals</label> <input type="number" name="away_goals" required></div>
-            <div class="form-group"><label>Home Corners</label> <input type="number" name="corners_home" value="0"></div>
-            <div class="form-group"><label>Away Corners</label> <input type="number" name="corners_away" value="0"></div>
-            <div class="form-group"><label>Home Fouls</label> <input type="number" name="fouls_home" value="0"></div>
-            <div class="form-group"><label>Away Fouls</label> <input type="number" name="fouls_away" value="0"></div>
-            <div class="form-group"><label>Home Yellow</label> <input type="number" name="yellow_home" value="0"></div>
-            <div class="form-group"><label>Away Yellow</label> <input type="number" name="yellow_away" value="0"></div>
-            <div class="form-group"><label>Home Red</label> <input type="number" name="red_home" value="0"></div>
-            <div class="form-group"><label>Away Red</label> <input type="number" name="red_away" value="0"></div>
+            <div class="form-group"><label>Team 1 Goals</label> <input type="number" name="home_goals" required></div>
+            <div class="form-group"><label>Team 2 Goals</label> <input type="number" name="away_goals" required></div>
+            <div class="form-group"><label>Team 1 Corners</label> <input type="number" name="corners_home" value="0"></div>
+            <div class="form-group"><label>Team 2 Corners</label> <input type="number" name="corners_away" value="0"></div>
+            <div class="form-group"><label>Team 1 Fouls</label> <input type="number" name="fouls_home" value="0"></div>
+            <div class="form-group"><label>Team 2 Fouls</label> <input type="number" name="fouls_away" value="0"></div>
+            <div class="form-group"><label>Team 1 Yellow</label> <input type="number" name="yellow_home" value="0"></div>
+            <div class="form-group"><label>Team 2 Yellow</label> <input type="number" name="yellow_away" value="0"></div>
+            <div class="form-group"><label>Team 1 Red</label> <input type="number" name="red_home" value="0"></div>
+            <div class="form-group"><label>Team 2 Red</label> <input type="number" name="red_away" value="0"></div>
             <div class="form-group">
-                <label><input type="checkbox" name="both_teams_score" value="true"> BTTS</label>
+                <label><input type="checkbox" name="both_teams_score" value="true"> BTTS (Both Teams Score)</label>
             </div>
             <div class="form-group">
-                <label><input type="checkbox" name="over_2_5" value="true"> Over 2.5</label>
+                <label><input type="checkbox" name="over_2_5" value="true"> Over 2.5 Goals</label>
             </div>
             <button type="submit">Add Match</button>
         </form>
     </div>
 
-    <!-- قائمة مباريات دور المجموعات -->
+    <!-- Group stage matches table -->
     <h2>⚽ Group Stage Matches</h2>
     <div class="match-table">
         <table class="match-table">
             <thead>
-                <tr><th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
+                <tr><th>ID</th><th>Group</th><th>Team 1</th><th>Team 2</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
             </thead>
             <tbody>
                 {% for m in matches %}
                 <tr>
-                    <td>{{ m.id }}</td><td>{{ m.group }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
-                    <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+                    <td>{{ m.id }}</td>
+                    <td>{{ m.group }}</td>
+                    <td>{{ m.home_team }}</td>
+                    <td>{{ m.away_team }}</td>
+                    <td>{{ m.datetime }}</td>
+                    <td>{{ m.prediction.winner }}</td>
                     <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
                     <td>
                         <a href="/admin/edit_match/{{ m.id }}" class="edit-btn" style="text-decoration: none; color: white; background: #3498db; padding: 5px 10px; border-radius: 4px;">✏️ Edit</a>
@@ -178,33 +176,26 @@
         </table>
     </div>
 
-    <!-- قائمة مباريات الأدوار الإقصائية -->
+    <!-- Knockout stage matches table -->
     <h2>🏆 Knockout Stage Matches</h2>
     <div class="match-table">
         <table class="match-table">
             <thead>
-                <tr><th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
+                <tr><th>ID</th><th>Stage</th><th>Team 1</th><th>Team 2</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
             </thead>
             <tbody>
                 {% for m in knockout %}
                 <tr>
-                    <td>{{ m.id }}</td><td>{{ m.stage }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
-                    <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+                    <td>{{ m.id }}</td>
+                    <td>{{ m.stage }}</td>
+                    <td>{{ m.home_team }}</td>
+                    <td>{{ m.away_team }}</td>
+                    <td>{{ m.datetime }}</td>
+                    <td>{{ m.prediction.winner }}</td>
                     <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
                     <td>
                         <a href="/admin/edit_match/{{ m.id }}" class="edit-btn" style="text-decoration: none; color: white; background: #3498db; padding: 5px 10px; border-radius: 4px;">✏️ Edit</a>
                         <form method="post" action="/admin/delete_match/{{ m.id }}" style="display:inline;" onsubmit="return confirm('Delete this match?');">
                             <button type="submit" class="delete-btn" style="background: #e74c3c; margin-left: 5px;">🗑️ Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        </form>
     </div>
-</div>
-<div class="footer">
-    <p>World Cup 2026 Predictions API</p>
-</div>
-</body>
-</html>
