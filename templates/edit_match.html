@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Match - WC 2026 Admin</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f4f7fa; }
+        .container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        label { display: block; margin-top: 12px; font-weight: bold; color: #2c3e50; }
+        input, select { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .checkbox-group { margin-top: 12px; }
+        .checkbox-group label { display: inline; font-weight: normal; margin-left: 5px; }
+        button { background: #27ae60; color: white; border: none; padding: 10px 20px; margin-top: 20px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2ecc71; }
+        .back-link { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>✏️ Edit Match: {{ match.home_team }} vs {{ match.away_team }}</h1>
+    <form method="post">
+        <label>Predicted Winner</label>
+        <input type="text" name="winner" value="{{ match.prediction.winner }}" required>
+
+        <label>Home Goals</label>
+        <input type="number" name="home_goals" value="{{ match.prediction.home_goals }}" required>
+
+        <label>Away Goals</label>
+        <input type="number" name="away_goals" value="{{ match.prediction.away_goals }}" required>
+
+        <label>Home Corners</label>
+        <input type="number" name="corners_home" value="{{ match.prediction.corners.home }}">
+
+        <label>Away Corners</label>
+        <input type="number" name="corners_away" value="{{ match.prediction.corners.away }}">
+
+        <label>Home Fouls</label>
+        <input type="number" name="fouls_home" value="{{ match.prediction.fouls.home }}">
+
+        <label>Away Fouls</label>
+        <input type="number" name="fouls_away" value="{{ match.prediction.fouls.away }}">
+
+        <label>Home Yellow Cards</label>
+        <input type="number" name="yellow_home" value="{{ match.prediction.yellow_cards.home }}">
+
+        <label>Away Yellow Cards</label>
+        <input type="number" name="yellow_away" value="{{ match.prediction.yellow_cards.away }}">
+
+        <label>Home Red Cards</label>
+        <input type="number" name="red_home" value="{{ match.prediction.red_cards.home }}">
+
+        <label>Away Red Cards</label>
+        <input type="number" name="red_away" value="{{ match.prediction.red_cards.away }}">
+
+        <div class="checkbox-group">
+            <input type="checkbox" name="both_teams_score" value="true" {% if match.prediction.both_teams_score %}checked{% endif %}>
+            <label>BTTS (Both Teams Score)</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" name="over_2_5" value="true" {% if match.prediction.over_2_5 %}checked{% endif %}>
+            <label>Over 2.5 Goals</label>
+        </div>
+
+        <button type="submit">💾 Save Changes</button>
+    </form>
+    <a href="/admin" class="back-link">← Back to Admin Panel</a>
+</div>
+</body>
+</html>
