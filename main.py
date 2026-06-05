@@ -7,9 +7,9 @@ import json
 import os
 import secrets
 
-app = FastAPI(title="World Cup 2026 API", description="Free & Premium predictions with 24h availability", version="3.0")
+app = FastAPI(title="World Cup 2026 API", description="Free & Premium predictions")
 
-# Admin authentication
+# Admin auth
 security = HTTPBasic()
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "cup2026")
@@ -23,11 +23,9 @@ def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
         raise HTTPException(status_code=401, detail="Unauthorized")
     return True
 
-# Data helpers
 def load_data():
     if not os.path.exists(DATA_FILE):
-        default = {"tournament": "FIFA World Cup 2026", "last_updated": datetime.now().isoformat(),
-                   "groups": [], "teams": {}, "matches": [], "knockout_matches": []}
+        default = {"tournament": "FIFA World Cup 2026", "last_updated": datetime.now().isoformat(), "groups": [], "teams": {}, "matches": [], "knockout_matches": []}
         save_data(default)
         return default
     with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -43,34 +41,25 @@ def get_next_id(data):
     return max(all_ids, default=0) + 1
 
 def is_prediction_available(match_datetime_str: str) -> bool:
-    """Check if current time is within 24 hours before match start."""
     try:
-        # match_datetime_str format: "YYYY-MM-DD HH:MM"
         match_dt = datetime.strptime(match_datetime_str, "%Y-%m-%d %H:%M")
-        # Assume UTC
         match_dt = match_dt.replace(tzinfo=timezone.utc)
         now = datetime.now(timezone.utc)
-        # Predictions become available exactly 24 hours before kickoff
         return now >= match_dt - timedelta(hours=24)
     except:
-        # If date parsing fails, show predictions anyway
         return True
 
 def default_prediction():
     return {
-        "winner": "TBD",
-        "home_goals": 0,
-        "away_goals": 0,
-        "total_goals": 0,
-        "both_teams_score": False,
-        "over_2_5": False,
+        "winner": "TBD", "home_goals": 0, "away_goals": 0, "total_goals": 0,
+        "both_teams_score": False, "over_2_5": False,
         "corners": {"home": 0, "away": 0, "total": 0},
         "fouls": {"home": 0, "away": 0, "total": 0},
         "yellow_cards": {"home": 0, "away": 0, "total": 0},
         "red_cards": {"home": 0, "away": 0, "total": 0}
     }
 
-# ---------- FREE endpoint (only winner, respects 24h rule) ----------
+# ---------- FREE endpoint ----------
 @app.get("/free/predict/{home_team}/{away_team}", tags=["Free"])
 def free_prediction(home_team: str, away_team: str):
     data = load_data()
@@ -79,7 +68,6 @@ def free_prediction(home_team: str, away_team: str):
         if m["home_team"].lower() == home_team.lower() and m["away_team"].lower() == away_team.lower():
             match_dt_str = m.get("datetime")
             if not match_dt_str:
-                # Fallback: use date only (assume 12:00)
                 match_dt_str = m.get("date", "2026-06-11") + " 12:00"
             if not is_prediction_available(match_dt_str):
                 return {
@@ -87,16 +75,15 @@ def free_prediction(home_team: str, away_team: str):
                     "date": m.get("date"),
                     "message": "Predictions will be available 24 hours before the match."
                 }
-            winner = m["prediction"]["winner"]
             return {
                 "match": f"{m['home_team']} vs {m['away_team']}",
                 "date": m.get("date"),
-                "predicted_winner": winner,
-                "message": "For full details (goals, corners, cards, BTTS) subscribe to a paid plan."
+                "predicted_winner": m["prediction"]["winner"],
+                "message": "For full details, subscribe to a paid plan."
             }
     raise HTTPException(404, "Match not found")
 
-# ---------- PREMIUM endpoint (full details, respects 24h rule) ----------
+# ---------- PREMIUM endpoint ----------
 @app.get("/premium/predict/{home_team}/{away_team}", tags=["Premium"])
 def premium_prediction(home_team: str, away_team: str):
     data = load_data()
@@ -122,7 +109,7 @@ def premium_prediction(home_team: str, away_team: str):
             }
     raise HTTPException(404, "Match not found")
 
-# ---------- Statistics (premium only) ----------
+# ---------- Statistics (premium) ----------
 @app.get("/premium/stats", tags=["Premium"])
 def premium_stats():
     data = load_data()
@@ -143,13 +130,8 @@ def premium_stats():
 @app.get("/admin", response_class=HTMLResponse, dependencies=[Depends(verify_admin)])
 def admin_panel(request: Request):
     data = load_data()
-    return templates.TemplateResponse("admin.html", {
-        "request": request,
-        "matches": data.get("matches", []),
-        "knockout": data.get("knockout_matches", [])
-    })
+    return templates.TemplateResponse("admin.html", {"request": request, "matches": data.get("matches", []), "knockout": data.get("knockout_matches", [])})
 
-# Admin: add new match
 @app.post("/admin/add_match", dependencies=[Depends(verify_admin)])
 async def add_match(
     home_team: str = Form(...), away_team: str = Form(...), date: str = Form(...), time: str = Form(...),
@@ -163,25 +145,16 @@ async def add_match(
 ):
     data = load_data()
     pred = {
-        "winner": winner,
-        "home_goals": home_goals,
-        "away_goals": away_goals,
-        "total_goals": home_goals + away_goals,
-        "both_teams_score": both_teams_score,
-        "over_2_5": over_2_5,
+        "winner": winner, "home_goals": home_goals, "away_goals": away_goals, "total_goals": home_goals+away_goals,
+        "both_teams_score": both_teams_score, "over_2_5": over_2_5,
         "corners": {"home": corners_home, "away": corners_away, "total": corners_home+corners_away},
         "fouls": {"home": fouls_home, "away": fouls_away, "total": fouls_home+fouls_away},
         "yellow_cards": {"home": yellow_home, "away": yellow_away, "total": yellow_home+yellow_away},
         "red_cards": {"home": red_home, "away": red_away, "total": red_home+red_away}
     }
     new_match = {
-        "id": get_next_id(data),
-        "stage": stage,
-        "group": group.upper() if stage == "group" else None,
-        "home_team": home_team,
-        "away_team": away_team,
-        "date": date,
-        "datetime": f"{date} {time}",
+        "id": get_next_id(data), "stage": stage, "group": group.upper() if stage=="group" else None,
+        "home_team": home_team, "away_team": away_team, "date": date, "datetime": f"{date} {time}",
         "prediction": pred
     }
     if stage == "group":
@@ -191,25 +164,15 @@ async def add_match(
     save_data(data)
     return RedirectResponse(url="/admin", status_code=303)
 
-# Admin: update existing match
 @app.post("/admin/update_match/{match_id}", dependencies=[Depends(verify_admin)])
-async def update_match(
-    match_id: int,
-    winner: str = Form(...), home_goals: int = Form(...), away_goals: int = Form(...),
-    corners_home: int = Form(0), corners_away: int = Form(0),
-    fouls_home: int = Form(0), fouls_away: int = Form(0),
-    yellow_home: int = Form(0), yellow_away: int = Form(0),
-    red_home: int = Form(0), red_away: int = Form(0),
-    both_teams_score: bool = Form(False), over_2_5: bool = Form(False)
-):
+async def update_match(match_id: int, winner: str = Form(...), home_goals: int = Form(...), away_goals: int = Form(...),
+    corners_home: int = Form(0), corners_away: int = Form(0), fouls_home: int = Form(0), fouls_away: int = Form(0),
+    yellow_home: int = Form(0), yellow_away: int = Form(0), red_home: int = Form(0), red_away: int = Form(0),
+    both_teams_score: bool = Form(False), over_2_5: bool = Form(False)):
     data = load_data()
     new_pred = {
-        "winner": winner,
-        "home_goals": home_goals,
-        "away_goals": away_goals,
-        "total_goals": home_goals + away_goals,
-        "both_teams_score": both_teams_score,
-        "over_2_5": over_2_5,
+        "winner": winner, "home_goals": home_goals, "away_goals": away_goals, "total_goals": home_goals+away_goals,
+        "both_teams_score": both_teams_score, "over_2_5": over_2_5,
         "corners": {"home": corners_home, "away": corners_away, "total": corners_home+corners_away},
         "fouls": {"home": fouls_home, "away": fouls_away, "total": fouls_home+fouls_away},
         "yellow_cards": {"home": yellow_home, "away": yellow_away, "total": yellow_home+yellow_away},
@@ -222,7 +185,6 @@ async def update_match(
             return RedirectResponse(url="/admin", status_code=303)
     raise HTTPException(404, "Match not found")
 
-# Admin: delete match
 @app.post("/admin/delete_match/{match_id}", dependencies=[Depends(verify_admin)])
 def delete_match(match_id: int):
     data = load_data()
@@ -233,4 +195,4 @@ def delete_match(match_id: int):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
