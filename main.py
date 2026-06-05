@@ -59,6 +59,18 @@ def default_prediction():
         "red_cards": {"home": 0, "away": 0, "total": 0}
     }
 
+def is_manually_edited(pred: dict) -> bool:
+    """Return True if any prediction value is non‑default (i.e., manually edited)."""
+    return (
+        pred.get("winner") != "TBD" or
+        pred.get("home_goals", 0) != 0 or
+        pred.get("away_goals", 0) != 0 or
+        pred.get("corners", {}).get("total", 0) != 0 or
+        pred.get("fouls", {}).get("total", 0) != 0 or
+        pred.get("yellow_cards", {}).get("total", 0) != 0 or
+        pred.get("red_cards", {}).get("total", 0) != 0
+    )
+
 # ---------- FREE endpoint ----------
 @app.get("/free/predict/{home_team}/{away_team}", tags=["Free"])
 def free_prediction(home_team: str, away_team: str):
@@ -66,6 +78,18 @@ def free_prediction(home_team: str, away_team: str):
     all_matches = data["matches"] + data.get("knockout_matches", [])
     for m in all_matches:
         if m["home_team"].lower() == home_team.lower() and m["away_team"].lower() == away_team.lower():
+            pred = m["prediction"]
+
+            # If the match has been manually edited (non‑default values), show immediately.
+            if is_manually_edited(pred):
+                return {
+                    "match": f"{m['home_team']} vs {m['away_team']}",
+                    "date": m.get("date"),
+                    "predicted_winner": pred["winner"],
+                    "message": "For full details, subscribe to a paid plan."
+                }
+
+            # Otherwise, apply the 24‑hour rule.
             match_dt_str = m.get("datetime")
             if not match_dt_str:
                 match_dt_str = m.get("date", "2026-06-11") + " 12:00"
@@ -75,10 +99,12 @@ def free_prediction(home_team: str, away_team: str):
                     "date": m.get("date"),
                     "message": "Predictions will be available 24 hours before the match."
                 }
+
+            # After 24 hours (or if date parsing failed), show the winner (still may be TBD).
             return {
                 "match": f"{m['home_team']} vs {m['away_team']}",
                 "date": m.get("date"),
-                "predicted_winner": m["prediction"]["winner"],
+                "predicted_winner": pred["winner"],
                 "message": "For full details, subscribe to a paid plan."
             }
     raise HTTPException(404, "Match not found")
@@ -90,6 +116,20 @@ def premium_prediction(home_team: str, away_team: str):
     all_matches = data["matches"] + data.get("knockout_matches", [])
     for m in all_matches:
         if m["home_team"].lower() == home_team.lower() and m["away_team"].lower() == away_team.lower():
+            pred = m["prediction"]
+
+            # If manually edited, show full details immediately.
+            if is_manually_edited(pred):
+                return {
+                    "match_id": m["id"],
+                    "home_team": m["home_team"],
+                    "away_team": m["away_team"],
+                    "date": m["date"],
+                    "stage": m.get("stage"),
+                    "prediction": pred
+                }
+
+            # Otherwise, apply 24‑hour rule.
             match_dt_str = m.get("datetime")
             if not match_dt_str:
                 match_dt_str = m.get("date", "2026-06-11") + " 12:00"
@@ -99,13 +139,15 @@ def premium_prediction(home_team: str, away_team: str):
                     "date": m.get("date"),
                     "message": "Full predictions will be available 24 hours before the match."
                 }
+
+            # After 24 hours (or fallback), show full details (still may be default values).
             return {
                 "match_id": m["id"],
                 "home_team": m["home_team"],
                 "away_team": m["away_team"],
                 "date": m["date"],
                 "stage": m.get("stage"),
-                "prediction": m["prediction"]
+                "prediction": pred
             }
     raise HTTPException(404, "Match not found")
 
@@ -192,7 +234,8 @@ def delete_match(match_id: int):
     data["knockout_matches"] = [m for m in data["knockout_matches"] if m["id"] != match_id]
     save_data(data)
     return RedirectResponse(url="/admin", status_code=303)
-# ========== صفحة تعديل مباراة واحدة (بدون JavaScript معقد) ==========
+
+# ---------- Edit match page (separate) ----------
 @app.get("/admin/edit_match/{match_id}", response_class=HTMLResponse, dependencies=[Depends(verify_admin)])
 def edit_match_form(request: Request, match_id: int):
     data = load_data()
@@ -211,7 +254,6 @@ async def update_match_from_form(match_id: int, request: Request):
         raise HTTPException(404, "Match not found")
     form = await request.form()
     
-    # تحويل القيم من النموذج
     home_goals = int(form.get("home_goals", 0))
     away_goals = int(form.get("away_goals", 0))
     corners_home = int(form.get("corners_home", 0))
@@ -239,6 +281,7 @@ async def update_match_from_form(match_id: int, request: Request):
     }
     save_data(data)
     return RedirectResponse(url="/admin", status_code=303)
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
