@@ -2,159 +2,209 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WC 2026 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WC 2026 Predictions - Admin</title>
     <style>
-        body { font-family: Arial; background: #f0f2f5; margin: 20px; }
-        .container { max-width: 1400px; margin: auto; background: white; padding: 20px; border-radius: 12px; }
-        h1 { color: #1a5276; }
-        form, table { margin-bottom: 30px; }
-        input, select { padding: 6px; margin: 4px; border-radius: 6px; border: 1px solid #ccc; }
-        button { background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
-        .delete { background: #c0392b; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; font-size: 0.8rem; }
-        th { background: #2980b9; color: white; }
-        .inline-edit { display: none; background: #fef9e4; padding: 15px; margin-top: 10px; border-radius: 8px; text-align: left; }
-        .inline-edit label { font-weight: bold; margin-right: 8px; }
-        .edit-row { margin-bottom: 10px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f4f7fa;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .add-match-form {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: inline-block;
+            margin-right: 15px;
+            vertical-align: top;
+        }
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #7f8c8d;
+        }
+        input, select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background: #2ecc71; }
+        .delete-btn {
+            background: #e74c3c;
+        }
+        .delete-btn:hover { background: #c0392b; }
+        .edit-btn {
+            background: #3498db;
+        }
+        .edit-btn:hover { background: #2980b9; }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            display: block;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #34495e;
+            color: white;
+        }
+        .match-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .edit-form {
+            background: #fef9e4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>🏆 World Cup 2026 - Admin Control Panel</h1>
-    
-    <!-- Add New Match Form -->
-    <h2>➕ Add New Match</h2>
-    <form method="post" action="/admin/add_match">
-        <input type="text" name="home_team" placeholder="Home Team" required>
-        <input type="text" name="away_team" placeholder="Away Team" required>
-        <input type="date" name="date" required>
-        <input type="time" name="time" step="60" required>
-        <select name="stage">
-            <option value="group">Group Stage</option>
-            <option value="round_of_32">Round of 32</option>
-            <option value="round_of_16">Round of 16</option>
-            <option value="quarter_final">Quarter Final</option>
-            <option value="semi_final">Semi Final</option>
-            <option value="third_place">Third Place</option>
-            <option value="final">Final</option>
-        </select>
-        <input type="text" name="group" placeholder="Group (A-L)">
-        <input type="text" name="winner" placeholder="Predicted Winner" required>
-        <input type="number" name="home_goals" placeholder="Home Goals" required>
-        <input type="number" name="away_goals" placeholder="Away Goals" required>
-        <input type="number" name="corners_home" placeholder="Home Corners">
-        <input type="number" name="corners_away" placeholder="Away Corners">
-        <input type="number" name="fouls_home" placeholder="Home Fouls">
-        <input type="number" name="fouls_away" placeholder="Away Fouls">
-        <input type="number" name="yellow_home" placeholder="Home Yellow">
-        <input type="number" name="yellow_away" placeholder="Away Yellow">
-        <input type="number" name="red_home" placeholder="Home Red">
-        <input type="number" name="red_away" placeholder="Away Red">
-        <label><input type="checkbox" name="both_teams_score"> BTTS</label>
-        <label><input type="checkbox" name="over_2_5"> Over 2.5</label>
-        <button type="submit">Add Match</button>
-    </form>
+    <h1>🏆 World Cup 2026 Predictions Admin</h1>
 
-    <!-- Group Stage Matches Table -->
-    <h2>⚽ Group Stage Matches ({{ matches|length }})</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th>
-            <th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th>
-        </tr>
-        {% for m in matches %}
-        <tr>
-            <td>{{ m.id }}</td><td>{{ m.group }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
-            <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
-            <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
-            <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
-            <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
-            <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
-            <td><button onclick="toggleEdit('g{{ m.id }}')">✏️ Edit</button></td>
-            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
-        </tr>
-        <tr><td colspan="12">
-            <div id="g{{ m.id }}" class="inline-edit">
-                <form method="post" action="/admin/update_match/{{ m.id }}">
-                    <div class="edit-row"><label>🏆 Winner:</label> <input type="text" name="winner" value="{{ m.prediction.winner }}" required></div>
-                    <div class="edit-row"><label>⚽ Home Goals:</label> <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
-                    <label>⚽ Away Goals:</label> <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required></div>
-                    <div class="edit-row"><label>🚩 Home Corners:</label> <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
-                    <label>🚩 Away Corners:</label> <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"></div>
-                    <div class="edit-row"><label>🤝 Home Fouls:</label> <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
-                    <label>🤝 Away Fouls:</label> <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"></div>
-                    <div class="edit-row"><label>🟨 Home Yellow Cards:</label> <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
-                    <label>🟨 Away Yellow Cards:</label> <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"></div>
-                    <div class="edit-row"><label>🟥 Home Red Cards:</label> <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
-                    <label>🟥 Away Red Cards:</label> <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"></div>
-                    <div class="edit-row">
-                        <label><input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}> BTTS (Both Teams Score)</label>
-                        <label><input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}> Over 2.5 Goals</label>
-                    </div>
-                    <button type="submit">💾 Save Changes</button>
-                </form>
+    <!-- نموذج إضافة مباراة جديدة -->
+    <div class="add-match-form">
+        <h2>➕ Add New Match</h2>
+        <form method="post" action="/admin/add_match">
+            <div class="form-group"><label>Home Team</label> <input type="text" name="home_team" required></div>
+            <div class="form-group"><label>Away Team</label> <input type="text" name="away_team" required></div>
+            <div class="form-group"><label>Date</label> <input type="date" name="date" required></div>
+            <div class="form-group"><label>Time</label> <input type="time" name="time" required></div>
+            <div class="form-group"><label>Stage</label>
+                <select name="stage">
+                    <option value="group">Group Stage</option>
+                    <option value="round_of_32">Round of 32</option>
+                    <option value="round_of_16">Round of 16</option>
+                    <option value="quarter_final">Quarter Final</option>
+                    <option value="semi_final">Semi Final</option>
+                    <option value="third_place">Third Place</option>
+                    <option value="final">Final</option>
+                </select>
             </div>
-        </td></tr>
-        {% endfor %}
-    </table>
+            <div class="form-group"><label>Group (A-L)</label> <input type="text" name="group"></div>
+            <div class="form-group"><label>Predicted Winner</label> <input type="text" name="winner" required></div>
+            <div class="form-group"><label>Home Goals</label> <input type="number" name="home_goals" required></div>
+            <div class="form-group"><label>Away Goals</label> <input type="number" name="away_goals" required></div>
+            <div class="form-group"><label>Home Corners</label> <input type="number" name="corners_home" value="0"></div>
+            <div class="form-group"><label>Away Corners</label> <input type="number" name="corners_away" value="0"></div>
+            <div class="form-group"><label>Home Fouls</label> <input type="number" name="fouls_home" value="0"></div>
+            <div class="form-group"><label>Away Fouls</label> <input type="number" name="fouls_away" value="0"></div>
+            <div class="form-group"><label>Home Yellow</label> <input type="number" name="yellow_home" value="0"></div>
+            <div class="form-group"><label>Away Yellow</label> <input type="number" name="yellow_away" value="0"></div>
+            <div class="form-group"><label>Home Red</label> <input type="number" name="red_home" value="0"></div>
+            <div class="form-group"><label>Away Red</label> <input type="number" name="red_away" value="0"></div>
+            <div class="form-group">
+                <label><input type="checkbox" name="both_teams_score" value="true"> BTTS</label>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" name="over_2_5" value="true"> Over 2.5</label>
+            </div>
+            <button type="submit">Add Match</button>
+        </form>
+    </div>
 
-    <!-- Knockout Stage Matches Table (same structure, you can add similar inline edit) -->
-    <h2>🏆 Knockout Stage Matches ({{ knockout|length }})</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th>
-            <th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th>
-        </tr>
-        {% for m in knockout %}
-        <tr>
-            <td>{{ m.id }}</td><td>{{ m.stage }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
-            <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
-            <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
-            <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
-            <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
-            <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
-            <td><button onclick="toggleEdit('k{{ m.id }}')">✏️ Edit</button></td>
-            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
-        </tr>
-        <tr><td colspan="12">
-            <div id="k{{ m.id }}" class="inline-edit">
-                <form method="post" action="/admin/update_match/{{ m.id }}">
-                    <div class="edit-row"><label>🏆 Winner:</label> <input type="text" name="winner" value="{{ m.prediction.winner }}" required></div>
-                    <div class="edit-row"><label>⚽ Home Goals:</label> <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
-                    <label>⚽ Away Goals:</label> <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required></div>
-                    <div class="edit-row"><label>🚩 Home Corners:</label> <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
-                    <label>🚩 Away Corners:</label> <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"></div>
-                    <div class="edit-row"><label>🤝 Home Fouls:</label> <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
-                    <label>🤝 Away Fouls:</label> <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"></div>
-                    <div class="edit-row"><label>🟨 Home Yellow Cards:</label> <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
-                    <label>🟨 Away Yellow Cards:</label> <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"></div>
-                    <div class="edit-row"><label>🟥 Home Red Cards:</label> <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
-                    <label>🟥 Away Red Cards:</label> <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"></div>
-                    <div class="edit-row">
-                        <label><input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}> BTTS</label>
-                        <label><input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}> Over 2.5</label>
-                    </div>
-                    <button type="submit">💾 Save Changes</button>
-                </form>
-            </div>
-        </td>
-        </tr>
-        {% endfor %}
-    </table>
+    <!-- قائمة مباريات دور المجموعات -->
+    <h2>⚽ Group Stage Matches</h2>
+    <div class="match-table">
+        <table class="match-table">
+            <thead>
+                <tr><th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                {% for m in matches %}
+                <tr>
+                    <td>{{ m.id }}</td><td>{{ m.group }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
+                    <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+                    <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
+                    <td>
+                        <a href="/admin/edit_match/{{ m.id }}" class="edit-btn" style="text-decoration: none; color: white; background: #3498db; padding: 5px 10px; border-radius: 4px;">✏️ Edit</a>
+                        <form method="post" action="/admin/delete_match/{{ m.id }}" style="display:inline;" onsubmit="return confirm('Delete this match?');">
+                            <button type="submit" class="delete-btn" style="background: #e74c3c; margin-left: 5px;">🗑️ Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- قائمة مباريات الأدوار الإقصائية -->
+    <h2>🏆 Knockout Stage Matches</h2>
+    <div class="match-table">
+        <table class="match-table">
+            <thead>
+                <tr><th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                {% for m in knockout %}
+                <tr>
+                    <td>{{ m.id }}</td><td>{{ m.stage }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
+                    <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+                    <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
+                    <td>
+                        <a href="/admin/edit_match/{{ m.id }}" class="edit-btn" style="text-decoration: none; color: white; background: #3498db; padding: 5px 10px; border-radius: 4px;">✏️ Edit</a>
+                        <form method="post" action="/admin/delete_match/{{ m.id }}" style="display:inline;" onsubmit="return confirm('Delete this match?');">
+                            <button type="submit" class="delete-btn" style="background: #e74c3c; margin-left: 5px;">🗑️ Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<script>
-function toggleEdit(id) {
-    var el = document.getElementById(id);
-    if (el) {
-        if (el.style.display === "none" || el.style.display === "") {
-            el.style.display = "block";
-        } else {
-            el.style.display = "none";
-        }
-    }
-}
-</script>
+<div class="footer">
+    <p>World Cup 2026 Predictions API</p>
+</div>
 </body>
 </html>
