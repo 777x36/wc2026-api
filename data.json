@@ -1,0 +1,3912 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "last_updated": "2026-06-05T06:21:59.040526",
+  "groups": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L"
+  ],
+  "teams": {
+    "A": [
+      "Mexique",
+      "Afrique du Sud",
+      "Corée du Sud",
+      "Tchéquie"
+    ],
+    "B": [
+      "Canada",
+      "Bosnie-Herzégovine",
+      "Qatar",
+      "Suisse"
+    ],
+    "C": [
+      "Brésil",
+      "Maroc",
+      "Haïti",
+      "Écosse"
+    ],
+    "D": [
+      "États-Unis",
+      "Paraguay",
+      "Australie",
+      "Turquie"
+    ],
+    "E": [
+      "Allemagne",
+      "Curaçao",
+      "Côte d'Ivoire",
+      "Équateur"
+    ],
+    "F": [
+      "Pays-Bas",
+      "Japon",
+      "Suède",
+      "Tunisie"
+    ],
+    "G": [
+      "Belgique",
+      "Égypte",
+      "Iran",
+      "Nouvelle-Zélande"
+    ],
+    "H": [
+      "Espagne",
+      "Cap-Vert",
+      "Arabie saoudite",
+      "Uruguay"
+    ],
+    "I": [
+      "France",
+      "Sénégal",
+      "Irak",
+      "Norvège"
+    ],
+    "J": [
+      "Argentine",
+      "Algérie",
+      "Autriche",
+      "Jordanie"
+    ],
+    "K": [
+      "Portugal",
+      "RD Congo",
+      "Ouzbékistan",
+      "Colombie"
+    ],
+    "L": [
+      "Angleterre",
+      "Croatie",
+      "Ghana",
+      "Panama"
+    ]
+  },
+  "matches": [
+    {
+      "id": 1,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Mexique",
+      "away_team": "Afrique du Sud",
+      "date": "2026-06-11",
+      "datetime": "2026-06-11 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Corée du Sud",
+      "away_team": "Tchéquie",
+      "date": "2026-06-12",
+      "datetime": "2026-06-12 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 3,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Tchéquie",
+      "away_team": "Afrique du Sud",
+      "date": "2026-06-18",
+      "datetime": "2026-06-18 18:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 4,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Mexique",
+      "away_team": "Corée du Sud",
+      "date": "2026-06-19",
+      "datetime": "2026-06-19 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Afrique du Sud",
+      "away_team": "Corée du Sud",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 6,
+      "stage": "group",
+      "group": "A",
+      "home_team": "Tchéquie",
+      "away_team": "Mexique",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 7,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Canada",
+      "away_team": "Bosnie-Herzégovine",
+      "date": "2026-06-12",
+      "datetime": "2026-06-12 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 8,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Qatar",
+      "away_team": "Suisse",
+      "date": "2026-06-13",
+      "datetime": "2026-06-13 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 9,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Suisse",
+      "away_team": "Bosnie-Herzégovine",
+      "date": "2026-06-18",
+      "datetime": "2026-06-18 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 10,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Canada",
+      "away_team": "Qatar",
+      "date": "2026-06-19",
+      "datetime": "2026-06-19 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 11,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Suisse",
+      "away_team": "Canada",
+      "date": "2026-06-24",
+      "datetime": "2026-06-24 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 12,
+      "stage": "group",
+      "group": "B",
+      "home_team": "Bosnie-Herzégovine",
+      "away_team": "Qatar",
+      "date": "2026-06-24",
+      "datetime": "2026-06-24 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 13,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Brésil",
+      "away_team": "Maroc",
+      "date": "2026-06-14",
+      "datetime": "2026-06-14 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 14,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Haïti",
+      "away_team": "Écosse",
+      "date": "2026-06-14",
+      "datetime": "2026-06-14 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 15,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Écosse",
+      "away_team": "Maroc",
+      "date": "2026-06-20",
+      "datetime": "2026-06-20 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 16,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Brésil",
+      "away_team": "Haïti",
+      "date": "2026-06-20",
+      "datetime": "2026-06-20 02:30",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 17,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Maroc",
+      "away_team": "Haïti",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 18,
+      "stage": "group",
+      "group": "C",
+      "home_team": "Écosse",
+      "away_team": "Brésil",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 19,
+      "stage": "group",
+      "group": "D",
+      "home_team": "États-Unis",
+      "away_team": "Paraguay",
+      "date": "2026-06-13",
+      "datetime": "2026-06-13 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 20,
+      "stage": "group",
+      "group": "D",
+      "home_team": "Australie",
+      "away_team": "Turquie",
+      "date": "2026-06-14",
+      "datetime": "2026-06-14 06:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 21,
+      "stage": "group",
+      "group": "D",
+      "home_team": "États-Unis",
+      "away_team": "Australie",
+      "date": "2026-06-19",
+      "datetime": "2026-06-19 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 22,
+      "stage": "group",
+      "group": "D",
+      "home_team": "Turquie",
+      "away_team": "Paraguay",
+      "date": "2026-06-20",
+      "datetime": "2026-06-20 05:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 23,
+      "stage": "group",
+      "group": "D",
+      "home_team": "Turquie",
+      "away_team": "États-Unis",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 24,
+      "stage": "group",
+      "group": "D",
+      "home_team": "Paraguay",
+      "away_team": "Australie",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 25,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Allemagne",
+      "away_team": "Curaçao",
+      "date": "2026-06-14",
+      "datetime": "2026-06-14 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 26,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Côte d'Ivoire",
+      "away_team": "Équateur",
+      "date": "2026-06-15",
+      "datetime": "2026-06-15 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 27,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Allemagne",
+      "away_team": "Côte d'Ivoire",
+      "date": "2026-06-20",
+      "datetime": "2026-06-20 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 28,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Équateur",
+      "away_team": "Curaçao",
+      "date": "2026-06-21",
+      "datetime": "2026-06-21 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 29,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Curaçao",
+      "away_team": "Côte d'Ivoire",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 30,
+      "stage": "group",
+      "group": "E",
+      "home_team": "Équateur",
+      "away_team": "Allemagne",
+      "date": "2026-06-25",
+      "datetime": "2026-06-25 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 31,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Pays-Bas",
+      "away_team": "Japon",
+      "date": "2026-06-14",
+      "datetime": "2026-06-14 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 32,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Suède",
+      "away_team": "Tunisie",
+      "date": "2026-06-15",
+      "datetime": "2026-06-15 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 33,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Pays-Bas",
+      "away_team": "Suède",
+      "date": "2026-06-20",
+      "datetime": "2026-06-20 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 34,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Tunisie",
+      "away_team": "Japon",
+      "date": "2026-06-21",
+      "datetime": "2026-06-21 06:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 35,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Tunisie",
+      "away_team": "Pays-Bas",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 36,
+      "stage": "group",
+      "group": "F",
+      "home_team": "Japon",
+      "away_team": "Suède",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 37,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Belgique",
+      "away_team": "Égypte",
+      "date": "2026-06-15",
+      "datetime": "2026-06-15 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 38,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Iran",
+      "away_team": "Nouvelle-Zélande",
+      "date": "2026-06-16",
+      "datetime": "2026-06-16 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 39,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Belgique",
+      "away_team": "Iran",
+      "date": "2026-06-21",
+      "datetime": "2026-06-21 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 40,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Nouvelle-Zélande",
+      "away_team": "Égypte",
+      "date": "2026-06-22",
+      "datetime": "2026-06-22 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 41,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Nouvelle-Zélande",
+      "away_team": "Belgique",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 05:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 42,
+      "stage": "group",
+      "group": "G",
+      "home_team": "Égypte",
+      "away_team": "Iran",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 05:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 43,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Espagne",
+      "away_team": "Cap-Vert",
+      "date": "2026-06-15",
+      "datetime": "2026-06-15 18:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 44,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Arabie saoudite",
+      "away_team": "Uruguay",
+      "date": "2026-06-16",
+      "datetime": "2026-06-16 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 45,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Espagne",
+      "away_team": "Arabie saoudite",
+      "date": "2026-06-21",
+      "datetime": "2026-06-21 18:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 46,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Uruguay",
+      "away_team": "Cap-Vert",
+      "date": "2026-06-22",
+      "datetime": "2026-06-22 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 47,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Cap-Vert",
+      "away_team": "Arabie saoudite",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 48,
+      "stage": "group",
+      "group": "H",
+      "home_team": "Uruguay",
+      "away_team": "Espagne",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 49,
+      "stage": "group",
+      "group": "I",
+      "home_team": "France",
+      "away_team": "Sénégal",
+      "date": "2026-06-16",
+      "datetime": "2026-06-16 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 50,
+      "stage": "group",
+      "group": "I",
+      "home_team": "Irak",
+      "away_team": "Norvège",
+      "date": "2026-06-17",
+      "datetime": "2026-06-17 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 51,
+      "stage": "group",
+      "group": "I",
+      "home_team": "France",
+      "away_team": "Irak",
+      "date": "2026-06-22",
+      "datetime": "2026-06-22 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 52,
+      "stage": "group",
+      "group": "I",
+      "home_team": "Norvège",
+      "away_team": "Sénégal",
+      "date": "2026-06-23",
+      "datetime": "2026-06-23 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 53,
+      "stage": "group",
+      "group": "I",
+      "home_team": "Norvège",
+      "away_team": "France",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 54,
+      "stage": "group",
+      "group": "I",
+      "home_team": "Sénégal",
+      "away_team": "Irak",
+      "date": "2026-06-26",
+      "datetime": "2026-06-26 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 55,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Argentine",
+      "away_team": "Algérie",
+      "date": "2026-06-17",
+      "datetime": "2026-06-17 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 56,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Autriche",
+      "away_team": "Jordanie",
+      "date": "2026-06-17",
+      "datetime": "2026-06-17 06:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 57,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Argentine",
+      "away_team": "Autriche",
+      "date": "2026-06-22",
+      "datetime": "2026-06-22 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 58,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Jordanie",
+      "away_team": "Algérie",
+      "date": "2026-06-23",
+      "datetime": "2026-06-23 05:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 59,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Algérie",
+      "away_team": "Autriche",
+      "date": "2026-06-28",
+      "datetime": "2026-06-28 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 60,
+      "stage": "group",
+      "group": "J",
+      "home_team": "Jordanie",
+      "away_team": "Argentine",
+      "date": "2026-06-28",
+      "datetime": "2026-06-28 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 61,
+      "stage": "group",
+      "group": "K",
+      "home_team": "Portugal",
+      "away_team": "RD Congo",
+      "date": "2026-06-17",
+      "datetime": "2026-06-17 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 62,
+      "stage": "group",
+      "group": "K",
+      "home_team": "Ouzbékistan",
+      "away_team": "Colombie",
+      "date": "2026-06-18",
+      "datetime": "2026-06-18 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 63,
+      "stage": "group",
+      "group": "K",
+      "home_team": "Portugal",
+      "away_team": "Ouzbékistan",
+      "date": "2026-06-23",
+      "datetime": "2026-06-23 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 64,
+      "stage": "group",
+      "group": "K",
+      "home_team": "Colombie",
+      "away_team": "RD Congo",
+      "date": "2026-06-24",
+      "datetime": "2026-06-24 04:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 65,
+      "stage": "group",
+      "group": "K",
+      "home_team": "Colombie",
+      "away_team": "Portugal",
+      "date": "2026-06-28",
+      "datetime": "2026-06-28 01:30",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 66,
+      "stage": "group",
+      "group": "K",
+      "home_team": "RD Congo",
+      "away_team": "Ouzbékistan",
+      "date": "2026-06-28",
+      "datetime": "2026-06-28 01:30",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 67,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Angleterre",
+      "away_team": "Croatie",
+      "date": "2026-06-17",
+      "datetime": "2026-06-17 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 68,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Ghana",
+      "away_team": "Panama",
+      "date": "2026-06-18",
+      "datetime": "2026-06-18 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 69,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Angleterre",
+      "away_team": "Ghana",
+      "date": "2026-06-23",
+      "datetime": "2026-06-23 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 70,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Panama",
+      "away_team": "Croatie",
+      "date": "2026-06-24",
+      "datetime": "2026-06-24 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 71,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Panama",
+      "away_team": "Angleterre",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 72,
+      "stage": "group",
+      "group": "L",
+      "home_team": "Croatie",
+      "away_team": "Ghana",
+      "date": "2026-06-27",
+      "datetime": "2026-06-27 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    }
+  ],
+  "knockout_matches": [
+    {
+      "id": 1001,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-28",
+      "datetime": "2026-06-28 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1002,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-29",
+      "datetime": "2026-06-29 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1003,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-29",
+      "datetime": "2026-06-29 22:30",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1004,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-30",
+      "datetime": "2026-06-30 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1005,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-30",
+      "datetime": "2026-06-30 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1006,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-06-30",
+      "datetime": "2026-06-30 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1007,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-01",
+      "datetime": "2026-07-01 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1008,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-01",
+      "datetime": "2026-07-01 18:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1009,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-01",
+      "datetime": "2026-07-01 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1010,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-02",
+      "datetime": "2026-07-02 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1011,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-02",
+      "datetime": "2026-07-02 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1012,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-03",
+      "datetime": "2026-07-03 01:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1013,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-03",
+      "datetime": "2026-07-03 05:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1014,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-03",
+      "datetime": "2026-07-03 20:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1015,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-04",
+      "datetime": "2026-07-04 00:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 1016,
+      "stage": "round_of_32",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-04",
+      "datetime": "2026-07-04 03:30",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2001,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-04",
+      "datetime": "2026-07-04 19:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2002,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-04",
+      "datetime": "2026-07-04 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2003,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-05",
+      "datetime": "2026-07-05 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2004,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-06",
+      "datetime": "2026-07-06 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2005,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-06",
+      "datetime": "2026-07-06 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2006,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-07",
+      "datetime": "2026-07-07 02:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2007,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-07",
+      "datetime": "2026-07-07 18:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 2008,
+      "stage": "round_of_16",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-07",
+      "datetime": "2026-07-07 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 3001,
+      "stage": "quarter_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-09",
+      "datetime": "2026-07-09 22:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 3002,
+      "stage": "quarter_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-10",
+      "datetime": "2026-07-10 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 3003,
+      "stage": "quarter_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-11",
+      "datetime": "2026-07-11 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 3004,
+      "stage": "quarter_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-12",
+      "datetime": "2026-07-12 03:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 4001,
+      "stage": "semi_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-14",
+      "datetime": "2026-07-14 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 4002,
+      "stage": "semi_final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-15",
+      "datetime": "2026-07-15 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 5001,
+      "stage": "third_place",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-18",
+      "datetime": "2026-07-18 23:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": 5002,
+      "stage": "final",
+      "home_team": "À définir",
+      "away_team": "À définir",
+      "date": "2026-07-19",
+      "datetime": "2026-07-19 21:00",
+      "prediction": {
+        "winner": "TBD",
+        "home_goals": 0,
+        "away_goals": 0,
+        "total_goals": 0,
+        "both_teams_score": false,
+        "over_2_5": false,
+        "corners": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "yellow_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      }
+    }
+  ]
+}

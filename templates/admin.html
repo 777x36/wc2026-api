@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WC 2026 Admin Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #f0f2f5; margin: 20px; }
+        .container { max-width: 1400px; margin: auto; background: white; padding: 20px; border-radius: 12px; }
+        h1 { color: #1a5276; }
+        form, table { margin-bottom: 30px; }
+        input, select { padding: 6px; margin: 4px; border-radius: 6px; border: 1px solid #ccc; }
+        button { background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+        .delete { background: #c0392b; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; font-size: 0.8rem; }
+        th { background: #2980b9; color: white; }
+        .inline-edit { display: none; background: #fef9e4; padding: 10px; margin-top: 5px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🏆 World Cup 2026 - Admin Control Panel</h1>
+    <h2>➕ Add New Match</h2>
+    <form method="post" action="/admin/add_match">
+        <input type="text" name="home_team" placeholder="Home Team" required>
+        <input type="text" name="away_team" placeholder="Away Team" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" step="60" required>
+        <select name="stage">
+            <option value="group">Group Stage</option>
+            <option value="round_of_32">Round of 32</option>
+            <option value="round_of_16">Round of 16</option>
+            <option value="quarter_final">Quarter Final</option>
+            <option value="semi_final">Semi Final</option>
+            <option value="third_place">Third Place</option>
+            <option value="final">Final</option>
+        </select>
+        <input type="text" name="group" placeholder="Group (A-L) for group stage">
+        <input type="text" name="winner" placeholder="Winner / TBD" required>
+        <input type="number" name="home_goals" placeholder="Home Goals" required>
+        <input type="number" name="away_goals" placeholder="Away Goals" required>
+        <input type="number" name="corners_home" placeholder="Home Corners">
+        <input type="number" name="corners_away" placeholder="Away Corners">
+        <input type="number" name="fouls_home" placeholder="Home Fouls">
+        <input type="number" name="fouls_away" placeholder="Away Fouls">
+        <input type="number" name="yellow_home" placeholder="Home Yellow">
+        <input type="number" name="yellow_away" placeholder="Away Yellow">
+        <input type="number" name="red_home" placeholder="Home Red">
+        <input type="number" name="red_away" placeholder="Away Red">
+        <label><input type="checkbox" name="both_teams_score"> BTTS</label>
+        <label><input type="checkbox" name="over_2_5"> Over 2.5</label>
+        <button type="submit">Add Match</button>
+    </form>
+
+    <h2>⚽ Group Stage ({{ matches|length }} matches)</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Group</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th></tr>
+        {% for m in matches %}
+        <tr>
+            <td>{{ m.id }}</td><td>{{ m.group }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
+            <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+            <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
+            <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
+            <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
+            <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
+            <td><button onclick="toggleEdit('g{{ m.id }}')">Edit</button></td>
+            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete?')"><button class="delete">Delete</button></form></td>
+        </tr>
+        <tr><td colspan="12"><div id="g{{ m.id }}" class="inline-edit"><form method="post" action="/admin/update_match/{{ m.id }}">...</form></div></td></tr>
+        {% endfor %}
+    </table>
+
+    <h2>🏆 Knockout Stage ({{ knockout|length }} matches)</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th><th>Winner</th><th>Score</th><th>Corners</th><th>Fouls</th><th>Cards</th><th>Edit</th><th>Delete</th></tr>
+        {% for m in knockout %}
+        <tr>
+            <td>{{ m.id }}</td><td>{{ m.stage }}</td><td>{{ m.home_team }}</td><td>{{ m.away_team }}</td>
+            <td>{{ m.datetime }}</td><td>{{ m.prediction.winner }}</td>
+            <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
+            <td>{{ m.prediction.corners.home }}-{{ m.prediction.corners.away }}</td>
+            <td>{{ m.prediction.fouls.home }}-{{ m.prediction.fouls.away }}</td>
+            <td>🟡{{ m.prediction.yellow_cards.total }} 🔴{{ m.prediction.red_cards.total }}</td>
+            <td><button onclick="toggleEdit('k{{ m.id }}')">Edit</button></td>
+            <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete?')"><button class="delete">Delete</button></form></td>
+        </tr>
+        <tr><td colspan="12"><div id="k{{ m.id }}" class="inline-edit">...</div></td></tr>
+        {% endfor %}
+    </table>
+</div>
+<script>
+function toggleEdit(id) {
+    var el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+</body>
+</html>
