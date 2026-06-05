@@ -14,12 +14,16 @@
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: center; font-size: 0.8rem; }
         th { background: #2980b9; color: white; }
-        .inline-edit { display: none; background: #fef9e4; padding: 10px; margin-top: 5px; border-radius: 8px; }
+        .inline-edit { display: none; background: #fef9e4; padding: 15px; margin-top: 10px; border-radius: 8px; text-align: left; }
+        .inline-edit label { font-weight: bold; margin-right: 8px; }
+        .edit-row { margin-bottom: 10px; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>🏆 World Cup 2026 - Admin Control Panel</h1>
+    
+    <!-- Add New Match Form -->
     <h2>➕ Add New Match</h2>
     <form method="post" action="/admin/add_match">
         <input type="text" name="home_team" placeholder="Home Team" required>
@@ -36,7 +40,7 @@
             <option value="final">Final</option>
         </select>
         <input type="text" name="group" placeholder="Group (A-L)">
-        <input type="text" name="winner" placeholder="Winner / TBD" required>
+        <input type="text" name="winner" placeholder="Predicted Winner" required>
         <input type="number" name="home_goals" placeholder="Home Goals" required>
         <input type="number" name="away_goals" placeholder="Away Goals" required>
         <input type="number" name="corners_home" placeholder="Home Corners">
@@ -52,6 +56,7 @@
         <button type="submit">Add Match</button>
     </form>
 
+    <!-- Group Stage Matches Table -->
     <h2>⚽ Group Stage Matches ({{ matches|length }})</h2>
     <table border="1">
         <tr>
@@ -69,28 +74,33 @@
             <td><button onclick="toggleEdit('g{{ m.id }}')">✏️ Edit</button></td>
             <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
         </tr>
-        <tr><td colspan="12"><div id="g{{ m.id }}" class="inline-edit">
-            <form method="post" action="/admin/update_match/{{ m.id }}">
-                <input type="text" name="winner" value="{{ m.prediction.winner }}" required><br>
-                <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
-                <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required><br>
-                <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
-                <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"><br>
-                <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
-                <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"><br>
-                <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
-                <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"><br>
-                <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
-                <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"><br>
-                <label>BTTS <input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}></label>
-                <label>Over 2.5 <input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}></label>
-                <button type="submit">💾 Save Changes</button>
-            </form>
-        </div></td></tr>
+        <tr><td colspan="12">
+            <div id="g{{ m.id }}" class="inline-edit">
+                <form method="post" action="/admin/update_match/{{ m.id }}">
+                    <div class="edit-row"><label>🏆 Winner:</label> <input type="text" name="winner" value="{{ m.prediction.winner }}" required></div>
+                    <div class="edit-row"><label>⚽ Home Goals:</label> <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
+                    <label>⚽ Away Goals:</label> <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required></div>
+                    <div class="edit-row"><label>🚩 Home Corners:</label> <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
+                    <label>🚩 Away Corners:</label> <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"></div>
+                    <div class="edit-row"><label>🤝 Home Fouls:</label> <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
+                    <label>🤝 Away Fouls:</label> <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"></div>
+                    <div class="edit-row"><label>🟨 Home Yellow Cards:</label> <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
+                    <label>🟨 Away Yellow Cards:</label> <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"></div>
+                    <div class="edit-row"><label>🟥 Home Red Cards:</label> <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
+                    <label>🟥 Away Red Cards:</label> <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"></div>
+                    <div class="edit-row">
+                        <label><input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}> BTTS (Both Teams Score)</label>
+                        <label><input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}> Over 2.5 Goals</label>
+                    </div>
+                    <button type="submit">💾 Save Changes</button>
+                </form>
+            </div>
+        </td></tr>
         {% endfor %}
     </table>
 
-    <h2>🏆 Knockout Matches ({{ knockout|length }})</h2>
+    <!-- Knockout Stage Matches Table (same structure, you can add similar inline edit) -->
+    <h2>🏆 Knockout Stage Matches ({{ knockout|length }})</h2>
     <table border="1">
         <tr>
             <th>ID</th><th>Stage</th><th>Home</th><th>Away</th><th>Date/Time</th>
@@ -107,24 +117,29 @@
             <td><button onclick="toggleEdit('k{{ m.id }}')">✏️ Edit</button></td>
             <td><form method="post" action="/admin/delete_match/{{ m.id }}" onsubmit="return confirm('Delete this match?')"><button class="delete" type="submit">🗑️ Delete</button></form></td>
         </tr>
-        <tr><td colspan="12"><div id="k{{ m.id }}" class="inline-edit">
-            <form method="post" action="/admin/update_match/{{ m.id }}">
-                <input type="text" name="winner" value="{{ m.prediction.winner }}" required><br>
-                <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
-                <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required><br>
-                <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
-                <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"><br>
-                <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
-                <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"><br>
-                <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
-                <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"><br>
-                <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
-                <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"><br>
-                <label>BTTS <input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}></label>
-                <label>Over 2.5 <input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}></label>
-                <button type="submit">💾 Save Changes</button>
-            </form>
-        </div></td></tr>
+        <tr><td colspan="12">
+            <div id="k{{ m.id }}" class="inline-edit">
+                <form method="post" action="/admin/update_match/{{ m.id }}">
+                    <div class="edit-row"><label>🏆 Winner:</label> <input type="text" name="winner" value="{{ m.prediction.winner }}" required></div>
+                    <div class="edit-row"><label>⚽ Home Goals:</label> <input type="number" name="home_goals" value="{{ m.prediction.home_goals }}" required>
+                    <label>⚽ Away Goals:</label> <input type="number" name="away_goals" value="{{ m.prediction.away_goals }}" required></div>
+                    <div class="edit-row"><label>🚩 Home Corners:</label> <input type="number" name="corners_home" value="{{ m.prediction.corners.home }}">
+                    <label>🚩 Away Corners:</label> <input type="number" name="corners_away" value="{{ m.prediction.corners.away }}"></div>
+                    <div class="edit-row"><label>🤝 Home Fouls:</label> <input type="number" name="fouls_home" value="{{ m.prediction.fouls.home }}">
+                    <label>🤝 Away Fouls:</label> <input type="number" name="fouls_away" value="{{ m.prediction.fouls.away }}"></div>
+                    <div class="edit-row"><label>🟨 Home Yellow Cards:</label> <input type="number" name="yellow_home" value="{{ m.prediction.yellow_cards.home }}">
+                    <label>🟨 Away Yellow Cards:</label> <input type="number" name="yellow_away" value="{{ m.prediction.yellow_cards.away }}"></div>
+                    <div class="edit-row"><label>🟥 Home Red Cards:</label> <input type="number" name="red_home" value="{{ m.prediction.red_cards.home }}">
+                    <label>🟥 Away Red Cards:</label> <input type="number" name="red_away" value="{{ m.prediction.red_cards.away }}"></div>
+                    <div class="edit-row">
+                        <label><input type="checkbox" name="both_teams_score" {% if m.prediction.both_teams_score %}checked{% endif %}> BTTS</label>
+                        <label><input type="checkbox" name="over_2_5" {% if m.prediction.over_2_5 %}checked{% endif %}> Over 2.5</label>
+                    </div>
+                    <button type="submit">💾 Save Changes</button>
+                </form>
+            </div>
+        </td>
+        </tr>
         {% endfor %}
     </table>
 </div>
@@ -138,11 +153,8 @@ function toggleEdit(id) {
         } else {
             el.style.display = "none";
         }
-    } else {
-        console.error("Element not found: " + id);
     }
 }
 </script>
-
 </body>
 </html>
