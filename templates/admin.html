@@ -199,3 +199,14 @@
                             <button type="submit" class="delete-btn" style="background: #e74c3c; margin-left: 5px;">🗑️ Delete</button>
         </form>
     </div>
+    ...
+                <!-- The rest of the table row for knockout matches -->
+                <td>{{ m.prediction.home_goals }}-{{ m.prediction.away_goals }}</td>
+                <td>
+                    ...
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
